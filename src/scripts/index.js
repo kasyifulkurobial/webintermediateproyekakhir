@@ -13,7 +13,7 @@ const isViewTransitionsSupported = Boolean(document.startViewTransition)
 const registerServiceWorker = async () => {
   if ("serviceWorker" in navigator) {
     try {
-      const registration = await navigator.serviceWorker.register("/sw.js")
+      const registration = await navigator.serviceWorker.register("/webintermediateproyekakhir/sw.js")
       console.log("Service Worker registered with scope:", registration.scope)
 
       // Subscribe to push notification if user is logged in
