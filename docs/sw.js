@@ -2,13 +2,13 @@
 
 const CACHE_NAME = "dicoding-stories-v1"
 const urlsToCache = [
-  "/webintermediateproyekakhir/",
-  "/webintermediateproyekakhir/index.html",
-  "/webintermediateproyekakhir/scripts/index.js",
-  "/webintermediateproyekakhir/styles/styles.css",
-  "/webintermediateproyekakhir/icons/icon-192x192.png",
-  "/webintermediateproyekakhir/images/logo.png",
-  "/webintermediateproyekakhir/offline.html",
+  "/",
+  "/index.html",
+  "/scripts/index.js",
+  "/styles/styles.css",
+  "/icons/icon-192x192.png",
+  "/images/logo.png",
+  "/offline.html",
 ]
 
 // Install Service Worker
@@ -72,7 +72,7 @@ self.addEventListener("fetch", (event) => {
         .catch(() => {
           // If the network is unavailable, try to return the offline page
           if (event.request.mode === "navigate") {
-            return caches.match("/webintermediateproyekakhir/offline.html")
+            return caches.match("/offline.html")
           }
         })
     }),
@@ -90,8 +90,8 @@ self.addEventListener("push", (event) => {
       title: "Dicoding Stories",
       options: {
         body: "Ada pembaruan baru dari Dicoding Stories",
-        icon: "/webintermediateproyekakhir/icons/icon-192x192.png",
-        badge: "/webintermediateproyekakhir/icons/icon-192x192.png",
+        icon: "/icons/icon-192x192.png",
+        badge: "/icons/icon-192x192.png",
       },
     }
   }
@@ -99,8 +99,8 @@ self.addEventListener("push", (event) => {
   const title = notificationData.title || "Dicoding Stories"
   const options = notificationData.options || {
     body: "Ada pembaruan baru dari Dicoding Stories",
-    icon: "/webintermediateproyekakhir/icons/icon-192x192.png",
-    badge: "/webintermediateproyekakhir/icons/icon-192x192.png",
+    icon: "/icons/icon-192x192.png",
+    badge: "/icons/icon-192x192.png",
   }
 
   event.waitUntil(self.registration.showNotification(title, options))
