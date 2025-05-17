@@ -1,0 +1,3 @@
+APP_URL=https://api.maptiler.com/maps/01969675-0647-757d-9d21-cc4a5d4e99c8/style.json?key=4LwqC1CE1U4TMycOPLEt
+MAP_SERVICE_API_KEY = 4LwqC1CE1U4TMycOPLEt
+
